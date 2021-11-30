@@ -142,7 +142,7 @@ const Mainsection = () => {
 								</p>
 
 								<a
-									href="https://nosrat-nosha.github.io/react-online-portal/"
+									href="https://compassionate-haibt-98646a.netlify.app/"
 									className="btn btn-outline-secondary 
 									 btn-liveLink "
 									target="_blank"
