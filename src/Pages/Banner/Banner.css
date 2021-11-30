@@ -1,0 +1,21 @@
+.banner {
+	background-image: url(../../image/bg2.jpg);
+	height: 28rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.banner-content {
+	margin-left: 30rem;
+	margin-top: 8rem;
+}
+.small-text {
+	font-weight: 400;
+}
+.large-text {
+	font-weight: 500;
+	font-size: 3rem;
+}
+.btn-resume {
+	width: 10rem;
+}
