@@ -4,19 +4,32 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 const Menu = () => {
 	return (
 		<div>
-			<Navbar collapseOnSelect expand="lg" bg="" variant="">
+			<Navbar
+				collapseOnSelect
+				expand="lg"
+				className="text-dark"
+				bg=""
+				variant=""
+			>
 				<Container>
-					<Navbar.Brand href="#home">Nosrat Nosha</Navbar.Brand>
+					<Navbar.Brand className="text-dark" href="#home">
+						Nosrat Nosha
+					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 					<Navbar.Collapse id="responsive-navbar-nav">
 						<Nav className="me-auto"></Nav>
 						<Nav>
-							<Nav.Link to="/resume">Resume</Nav.Link>
+							<Nav.Link className="text-dark" to="/resume">
+								Resume
+							</Nav.Link>
 
-							<Nav.Link href="">About</Nav.Link>
+							<Nav.Link className="text-dark" href="">
+								About
+							</Nav.Link>
 							<Nav.Link
 								href="
                             "
+								className="text-dark"
 							>
 								Contact
 							</Nav.Link>
