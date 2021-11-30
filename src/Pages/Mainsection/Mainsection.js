@@ -1,14 +1,43 @@
 import React from "react";
 import "./Mainsection.css";
+
+import emailjs from "emailjs-com";
 import myImg from "../../image/my-bg2.png";
 import project1 from "../../image/project1.JPG";
 import project2 from "../../image/project2.JPG";
 import project3 from "../../image/project3.JPG";
+
+import web from "../../image/web.png";
+// import html from "../../image/html.png";
+// import css from "../../image/css.png";
+// import js from "../../image/js.png";
 import { Link } from "react-router-dom";
-import { Nav, ProgressBar } from "react-bootstrap";
+import { ProgressBar } from "react-bootstrap";
 
 const Mainsection = () => {
 	const url1 = "https://react-assignment-11.web.app/";
+
+	const sendEmail = (e) => {
+		e.preventDefault();
+
+		emailjs
+			.sendForm(
+				"gmail",
+				"service_fgmrj3m",
+				"template_19d6ivy",
+				e.target,
+				"event_4fa90e2119989b589ea6cae2"
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
+		e.target.reset();
+	};
 	return (
 		<div>
 			{/* About me section  */}
@@ -44,9 +73,30 @@ const Mainsection = () => {
 									Perspiciatis, temporibus!
 								</p>
 
-								<Link to={url1} target="_blank">
-									Live site Link
-								</Link>
+								<a
+									href="https://react-assignment-11.web.app/"
+									className="btn btn-outline-secondary 
+									 btn-liveLink "
+									target="_blank"
+								>
+									LIVE LINK
+								</a>
+								<a
+									href="https://github.com/nosrat-nosha/dreamy-travels-server-site"
+									className="btn btn-outline-secondary 
+									 btn-liveLink ms-1"
+									target="_blank"
+								>
+									SERVER SITE CODE
+								</a>
+								<a
+									href="https://github.com/nosrat-nosha/dreamy-travels-client-site"
+									className="btn btn-outline-secondary 
+									 btn-liveLink mt-2"
+									target="_blank"
+								>
+									CLIENT SITE CODE
+								</a>
 							</div>
 						</div>
 					</div>
@@ -61,9 +111,22 @@ const Mainsection = () => {
 									Perspiciatis, temporibus!
 								</p>
 
-								<Link to={url1} target="_blank">
-									Live site Link
-								</Link>
+								<a
+									href="https://kids-university.netlify.app/"
+									className="btn btn-outline-secondary 
+									 btn-liveLink "
+									target="_blank"
+								>
+									LIVE LINK
+								</a>
+								<a
+									href="https://github.com/nosrat-nosha/Kids-University"
+									className="btn btn-outline-secondary 
+									 btn-liveLink ms-1"
+									target="_blank"
+								>
+									SERVER SITE CODE
+								</a>
 							</div>
 						</div>
 					</div>
@@ -78,9 +141,22 @@ const Mainsection = () => {
 									Perspiciatis, temporibus!
 								</p>
 
-								<Link to={url1} target="_blank">
-									Live site Link
-								</Link>
+								<a
+									href="https://nosrat-nosha.github.io/react-online-portal/"
+									className="btn btn-outline-secondary 
+									 btn-liveLink "
+									target="_blank"
+								>
+									LIVE LINK
+								</a>
+								<a
+									href="https://github.com/nosrat-nosha/react-online-portal"
+									className="btn btn-outline-secondary 
+									 btn-liveLink ms-1"
+									target="_blank"
+								>
+									CODE LINK
+								</a>
 							</div>
 						</div>
 					</div>
@@ -88,37 +164,105 @@ const Mainsection = () => {
 			</div>
 
 			{/* My Sills  */}
-			<div className="">
+			<div className="container">
 				<div className="row mx-auto">
 					<div className="col-lg-3 p-5 mx-auto projects-title">My Skills</div>
 				</div>
-				<div className="row container">
-					<div className="col-lg-6"></div>
-					<div className="col-lg-6">
-						<div>
+				<div className="row">
+					<div className="col-lg-6 col-sm-12">
+						<img
+							className=" skill-img me-3"
+							src={web}
+							class="img-thumbnail"
+							alt="..."
+						/>
+					</div>
+					<div className="col-lg-6 ">
+						<div className="">
+							{" "}
 							<span>HTML5 </span> <span> 90%</span>
-							<ProgressBar className="bar1" animated now={90} />
+							<ProgressBar className="" animated now={90} />
 						</div>
-						<div>
+						<div className="mt-4">
+							{" "}
 							<span>CSS3 </span> <span> 90%</span>
-							<ProgressBar className="bar1" animated now={90} />
+							<ProgressBar className="" animated now={90} />
 						</div>
-						<div>
-							<span>JAVASCRIPT </span> <span> 90%</span>
-							<ProgressBar className="bar1" animated now={90} />
+						<div className="mt-4">
+							{" "}
+							<span>JAVASCRIPT </span> <span> 70%</span>
+							<ProgressBar className="" animated now={70} />
 						</div>
-						<div>
-							<span>REACT JS</span> <span> 80%</span>
-							<ProgressBar className="bar1" animated now={90} />
+						<div className="mt-4">
+							{" "}
+							<span>REACT JS </span> <span> 70%</span>
+							<ProgressBar className="" animated now={70} />
 						</div>
-						<div>
-							<span>NODE JS</span> <span> 50%</span>
-							<ProgressBar className="bar1" animated now={50} />
+						<div className="mt-4">
+							{" "}
+							<span>NODE JS </span> <span> 50%</span>
+							<ProgressBar className="" animated now={50} />
 						</div>
-						<div>
-							<span>MONGODB</span> <span> 50%</span>
-							<ProgressBar className="bar1" animated now={50} />
+						<div className="mt-4">
+							{" "}
+							<span>MONGODB </span> <span> 50%</span>
+							<ProgressBar className="" animated now={50} />
 						</div>
+					</div>
+				</div>
+			</div>
+			{/* My Sills  */}
+			<div className="container">
+				<div className="row mx-auto">
+					<div className="col-lg-3 p-5 mx-auto projects-title">Contact Me</div>
+				</div>
+				<div className="row">
+					<div className="col-lg-12">
+						<form onSubmit={sendEmail}>
+							<div className="row pt-5 mx-auto">
+								<div className="col-8 form-group mx-auto">
+									<input
+										type="text"
+										className="form-control"
+										placeholder="Name"
+										name="name"
+									/>
+								</div>
+								<div className="col-8 form-group pt-2 mx-auto">
+									<input
+										type="email"
+										className="form-control"
+										placeholder="Email Address"
+										name="email"
+									/>
+								</div>
+								<div className="col-8 form-group pt-2 mx-auto">
+									<input
+										type="text"
+										className="form-control"
+										placeholder="Subject"
+										name="subject"
+									/>
+								</div>
+								<div className="col-8 form-group pt-2 mx-auto">
+									<textarea
+										className="form-control"
+										id=""
+										cols="30"
+										rows="8"
+										placeholder="Your message"
+										name="message"
+									></textarea>
+								</div>
+								<div className="col-8 pt-3 mx-auto">
+									<input
+										type="submit"
+										className="btn btn-info"
+										value="Send Message"
+									></input>
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
