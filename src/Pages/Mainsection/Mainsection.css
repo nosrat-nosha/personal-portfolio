@@ -1,8 +1,10 @@
 /* About me section  */
 .my-img {
-	width: 25rem;
+	width: 20rem;
 	margin-left: 10rem;
+	height: 25rem;
 	margin-top: 3rem;
+	border: 10px solid rgb(58, 51, 51);
 }
 .about-text {
 	margin-top: 3rem;
@@ -13,7 +15,6 @@
 	font-weight: 600;
 }
 .about-p {
-	font-weight: 500;
 	margin-top: 2rem;
 }
 .project-img1 {

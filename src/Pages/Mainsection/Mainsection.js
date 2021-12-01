@@ -3,6 +3,7 @@ import "./Mainsection.css";
 
 import emailjs from "emailjs-com";
 import myImg from "../../image/my-bg2.png";
+import myImg2 from "../../image/me1.jpg";
 import project1 from "../../image/project1.JPG";
 import project5 from "../../image/project5.JPG";
 import project4 from "../../image/project4.JPG";
@@ -43,15 +44,26 @@ const Mainsection = (e) => {
 			{/* About me section  */}
 			<div className="row container">
 				<div className="col-lg-8">
-					<img className="my-img" src={myImg} alt="" />
+					<img className="my-img" src={myImg2} alt="" />
 				</div>
 				<div className="col-lg-4 about-text">
-					<div className="about-title">About Me</div>
+					<div className="about-title text-secondary">Why Me ?</div>
 					<p className="about-p">
-						I'm Nosha, a front-end web developer. I'm an expert in JavaScript,
-						React.js, Html5,Css3, Bootstrap and MongoDB. Now I'm ready to work
-						as a junior front-end web developer. In the future, I want to be a
-						full-stack web developer.
+						Honestly, I possess all the skills and experience that you're
+						looking for. I'm pretty confident that I am the best candidate for
+						this job role. It's not just my background in the past projects, but
+						also my people skills, which will be applicable in this position.
+					</p>
+					<p>
+						<span className="fw-bold text-secondary">My Services: </span>
+						<br />
+						Front-End Design. <br />
+						Back-End Development. <br />
+						PSD to HTML5. <br />
+						Build Authentication.
+						<br />
+						100% Responsive Website.
+						<br />
 					</p>
 				</div>
 			</div>
@@ -59,11 +71,13 @@ const Mainsection = (e) => {
 			{/* My Projects  */}
 			<div className="">
 				<div className="row mx-auto">
-					<div className="col-lg-3 p-5 mx-auto projects-title">My Projects</div>
+					<div className="col-lg-3 p-5 mx-auto projects-title text-warning">
+						My Projects
+					</div>
 				</div>
 				<div className="row container mx-auto">
 					{/* project 1 */}
-					<div className="col-lg-4">
+					<div className="col-lg-4 col-sm-12">
 						<div class="card">
 							<img src={project1} class="card-img-top" alt="..." />
 							<div class="card-body">
@@ -117,7 +131,7 @@ const Mainsection = (e) => {
 						</div>
 					</div>
 					{/* project 2 */}
-					<div className="col-lg-4">
+					<div className="col-lg-4 col-sm-12">
 						<div class="card">
 							<img src={project5} class="card-img-top" alt="..." />
 							<div class="card-body">
@@ -164,7 +178,7 @@ const Mainsection = (e) => {
 						</div>
 					</div>
 					{/* project 3 */}
-					<div className="col-lg-4">
+					<div className="col-lg-4 col-sm-12">
 						<div class="card">
 							<img src={project4} class="card-img-top" alt="..." />
 							<div class="card-body">
@@ -224,7 +238,9 @@ const Mainsection = (e) => {
 			{/* My Sills  */}
 			<div className="container">
 				<div className="row mx-auto">
-					<div className="col-lg-3 p-5 mx-auto projects-title">My Skills</div>
+					<div className="col-lg-3 p-5 mx-auto projects-title text-warning">
+						My Skills
+					</div>
 				</div>
 				<div className="row">
 					<div className="col-lg-6 col-sm-12">
@@ -315,7 +331,7 @@ const Mainsection = (e) => {
 								<div className="col-8 pt-3 mx-auto">
 									<input
 										type="submit"
-										className="btn btn-info"
+										className="btn btn-outline-warning rounded-pill"
 										value="Send Message"
 									></input>
 								</div>
