@@ -10,7 +10,7 @@
 	margin-top: 8rem;
 }
 .small-text {
-	font-weight: 400;
+	font-weight: bold;
 }
 .large-text {
 	font-weight: 500;
@@ -18,4 +18,27 @@
 }
 .btn-resume {
 	width: 10rem;
+}
+@media screen and (max-width: 600px) {
+	.banner {
+		background-image: url(../../image/bg2.jpg);
+		height: 28rem;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.banner-content {
+		margin-left: 0rem;
+		margin-top: 8rem;
+	}
+	.small-text {
+		font-weight: bold;
+	}
+	.large-text {
+		font-weight: 500;
+		font-size: 2rem;
+	}
+	.btn-resume {
+		width: 10rem;
+	}
 }

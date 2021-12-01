@@ -4,8 +4,8 @@ import "./Mainsection.css";
 import emailjs from "emailjs-com";
 import myImg from "../../image/my-bg2.png";
 import project1 from "../../image/project1.JPG";
-import project2 from "../../image/project2.JPG";
-import project3 from "../../image/project3.JPG";
+import project5 from "../../image/project5.JPG";
+import project4 from "../../image/project4.JPG";
 
 import web from "../../image/web.png";
 // import html from "../../image/html.png";
@@ -14,12 +14,13 @@ import web from "../../image/web.png";
 import { Link } from "react-router-dom";
 import { ProgressBar } from "react-bootstrap";
 
-const Mainsection = () => {
+const Mainsection = (e) => {
 	const url1 = "https://react-assignment-11.web.app/";
 
 	const sendEmail = (e) => {
 		e.preventDefault();
-
+		e.target.reset();
+		console.log("n");
 		emailjs
 			.sendForm(
 				"gmail",
@@ -36,7 +37,6 @@ const Mainsection = () => {
 					console.log(error.text);
 				}
 			);
-		e.target.reset();
 	};
 	return (
 		<div>
@@ -68,10 +68,26 @@ const Mainsection = () => {
 							<img src={project1} class="card-img-top" alt="..." />
 							<div class="card-body">
 								<h5 class="card-title">Dreamy Travels</h5>
-								<p class="card-text">
-									Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-									Perspiciatis, temporibus!
-								</p>
+								<h4 class="card-title text-secondary">
+									It's a traveling website
+								</h4>
+
+								<div className="">
+									<h4 class="card-title text-warning">Main Features :</h4>
+									<p class="card-text font-monospace">
+										• Travelers can add events in their list. <br /> • Travelers
+										also can delete any events if they don't like. <br />• There
+										is google sign in option.
+									</p>
+								</div>
+								<div className="">
+									{" "}
+									<h4 class="card-title text-warning">Tools :</h4>
+									<h6>
+										Visual Studio code, HTML5, CSS3, React.js, Bootstrap,
+										Firebase, MongoDB, Heroku
+									</h6>
+								</div>
 
 								<a
 									href="https://react-assignment-11.web.app/"
@@ -103,16 +119,33 @@ const Mainsection = () => {
 					{/* project 2 */}
 					<div className="col-lg-4">
 						<div class="card">
-							<img src={project2} class="card-img-top" alt="..." />
+							<img src={project5} class="card-img-top" alt="..." />
 							<div class="card-body">
-								<h5 class="card-title">Kids University</h5>
-								<p class="card-text">
-									Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-									Perspiciatis, temporibus!
-								</p>
+								<h5 class="card-title">Hopewell Hospital</h5>
+								<h4 class="card-title text-secondary">
+									It's a health care website
+								</h4>
+
+								<div className="">
+									<h4 class="card-title text-warning">Main Features :</h4>
+									<p class="card-text font-monospace">
+										• User have to sign up /sign in to see special features{" "}
+										<br /> • We have FAQ section where patients can ask any
+										questions.
+										<br />• We divided our doctors department wise.
+									</p>
+								</div>
+								<div className="">
+									{" "}
+									<h4 class="card-title text-warning">Tools :</h4>
+									<h6>
+										Visual Studio code, HTML5, CSS3, React.js, Bootstrap,
+										Firebase,Netlify
+									</h6>
+								</div>
 
 								<a
-									href="https://kids-university.netlify.app/"
+									href="https://react-assignment-10-f0ce1.web.app/"
 									className="btn btn-outline-secondary 
 									 btn-liveLink "
 									target="_blank"
@@ -120,7 +153,7 @@ const Mainsection = () => {
 									LIVE LINK
 								</a>
 								<a
-									href="https://github.com/nosrat-nosha/Kids-University"
+									href="https://github.com/nosrat-nosha/HealthCare-Website"
 									className="btn btn-outline-secondary 
 									 btn-liveLink ms-1"
 									target="_blank"
@@ -133,16 +166,33 @@ const Mainsection = () => {
 					{/* project 3 */}
 					<div className="col-lg-4">
 						<div class="card">
-							<img src={project3} class="card-img-top" alt="..." />
+							<img src={project4} class="card-img-top" alt="..." />
 							<div class="card-body">
 								<h5 class="card-title">Dreamy Travels</h5>
-								<p class="card-text">
-									Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-									Perspiciatis, temporibus!
-								</p>
+								<h4 class="card-title text-secondary">
+									It's a hand bag shop website
+								</h4>
+
+								<div className="">
+									<h4 class="card-title text-warning">Main Features :</h4>
+									<p class="card-text font-monospace">
+										• Without registration user can't see some features. <br />{" "}
+										• We have different admin and user panel. <br />• User can
+										place order also see all his/her orders ,also can add
+										review.
+									</p>
+								</div>
+								<div className="">
+									{" "}
+									<h4 class="card-title text-warning">Tools :</h4>
+									<h6>
+										Visual Studio code, HTML5, CSS3, React.js, Bootstrap,
+										Firebase, MongoDB, Heroku
+									</h6>
+								</div>
 
 								<a
-									href="https://compassionate-haibt-98646a.netlify.app/"
+									href="https://react-assignment-12.web.app/"
 									className="btn btn-outline-secondary 
 									 btn-liveLink "
 									target="_blank"
@@ -150,12 +200,20 @@ const Mainsection = () => {
 									LIVE LINK
 								</a>
 								<a
-									href="https://github.com/nosrat-nosha/react-online-portal"
+									href="https://github.com/nosrat-nosha/fashionista-server-side"
 									className="btn btn-outline-secondary 
 									 btn-liveLink ms-1"
 									target="_blank"
 								>
-									CODE LINK
+									SERVER SITE LINK
+								</a>
+								<a
+									href="https://github.com/nosrat-nosha/fashionista-client-site"
+									className="btn btn-outline-secondary 
+									 btn-liveLink mt-1"
+									target="_blank"
+								>
+									CLIENT SITE LINK
 								</a>
 							</div>
 						</div>
